@@ -4,7 +4,10 @@ import 'package:todo/constants/color.dart';
 class CardToDo extends StatelessWidget {
   const CardToDo({
     super.key,
+    required this.title,
   });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +18,7 @@ class CardToDo extends StatelessWidget {
         margin: EdgeInsets.all(8),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [Text('Siapkan Card', style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)), Text('Friday, 21 Feb 2025 at 12:42 PM')],
+          children: [Text(title, style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18)), Text('Friday, 21 Feb 2025 at 12:42 PM')],
         ),
       ),
     );
